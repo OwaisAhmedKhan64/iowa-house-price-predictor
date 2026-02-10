@@ -1,0 +1,47 @@
+# --- Frontend (Vue.js) ---
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/coverage/
+frontend/.eslintcache
+frontend/cypress/videos/
+frontend/cypress/screenshots/
+frontend/__screenshots__/
+frontend/.env.local
+frontend/.env.*.local
+*.timestamp-*-*.mjs
+
+# --- Backend (Python/FastAPI) ---
+backend/.venv/
+backend/venv/
+backend/__pycache__/
+backend/*.py[cod]
+backend/*$py.class
+backend/.env
+
+# --- Data & Machine Learning ---
+# We usually ignore the raw data and the saved model to keep the repo small
+backend/data/*.csv
+backend/*.joblib
+backend/*.pkl
+
+# --- Logs & Debugging ---
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- Editor & System ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
