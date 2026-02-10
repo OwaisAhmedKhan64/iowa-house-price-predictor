@@ -15,20 +15,21 @@ features = [
 
 X_raw = home_data[features]     # 6 columns
 y = home_data['Price']
-X = pd.get_dummies(X_raw)       # 8 columns: 'Type' column is one-hot encoded now.
-
-train_X, test_X, train_y, test_y = train_test_split(X, y, random_state=1)
+X = pd.get_dummies(X_raw)       # Many columns: 'Type' and 'Regionname' columns are one-hot encoded now.
 
 home_model = RandomForestRegressor(random_state=1)
 
 print ("Training...")
-home_model.fit(train_X, train_y)
+home_model.fit(X, y)
 
+'''
+FOR TRAINING AND TESTING THE MODEL
+
+train_X, test_X, train_y, test_y = train_test_split(X, y, random_state=1)
 test_predictions = home_model.predict(test_X)
-
 error = mean_absolute_error(test_y, test_predictions)
-
 print(error)
+'''
 
 model_columns = list(X.columns)
 

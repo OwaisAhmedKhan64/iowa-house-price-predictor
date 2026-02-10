@@ -9,21 +9,18 @@ frontend/cypress/screenshots/
 frontend/__screenshots__/
 frontend/.env.local
 frontend/.env.*.local
+frontend.vscode
 *.timestamp-*-*.mjs
 
-# --- Backend (Python/FastAPI) ---
+# --- Backend (Django) ---
 backend/.venv/
 backend/venv/
-backend/__pycache__/
-backend/*.py[cod]
+**/__pycache__/
+**.py[cod]
 backend/*$py.class
 backend/.env
-
-# --- Data & Machine Learning ---
-# We usually ignore the raw data and the saved model to keep the repo small
-backend/data/*.csv
-backend/*.joblib
-backend/*.pkl
+backend/db.sqlite3
+backend/staticfiles/
 
 # --- Logs & Debugging ---
 logs
@@ -35,8 +32,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 # --- Editor & System ---
-.vscode/*
-!.vscode/extensions.json
+.vscode/
 .idea/
 *.suo
 *.ntvs*
