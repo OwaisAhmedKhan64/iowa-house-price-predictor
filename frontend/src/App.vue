@@ -1,12 +1,15 @@
 <template>
     <div id="app" class="container">
+		
         <header class="header">
             <h1>Melbourne House Price Predictor</h1>
             <p>Enter the details below to estimate the property value.</p>
         </header>
         
         <div class="content-row">
+
             <div class="result-section">
+
                 <div v-if="prediction !== null" class="result-card success">
                     <h3>Estimated Value</h3>
                     <p class="price">${{ prediction.toLocaleString() }}</p>
@@ -20,10 +23,13 @@
                 <div v-if="error" class="error-message">
                     {{ error }}
                 </div>
+
             </div>
 
             <div class="form-section">
+
                 <div class="card">
+
                     <div class="form-group">
                         <label>Number of Rooms</label>
                         <input v-model="formData.Rooms" type="number" min="1" step="1">
